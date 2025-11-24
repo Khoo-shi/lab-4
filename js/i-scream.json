@@ -25,6 +25,29 @@
         "clover honey"
       ],
       "image" : "peach-mango.svg"
+    },
+    {
+      "name": "Berry Blast Avalanche",
+      "calories": 280,
+      "type": "frozen yogurt",
+      "ingredients": [
+        "blueberries",
+        "raspberries",
+        "greek yogurt"
+      ],
+      "image": "berry-blast.svg"
+    },
+    {
+      "name": "Caramel Chaos Crunch",
+      "calories": 500,
+      "type": "ice cream",
+      "ingredients": [
+        "salted caramel",
+        "waffle cone pieces",
+        "cream"
+      ],
+      "image": "caramel-crunch.svg"
     }
+
   ]
 }
