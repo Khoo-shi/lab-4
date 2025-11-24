@@ -13,7 +13,7 @@
         "dark chocolate chips",
         "vanilla extract"
       ],
-      "image" : "chocolate-mint.svg"
+      "image" : "images/chocolate-mint.svg"
     },
     {
       "name" : "Perfect Peach Mango",
@@ -24,7 +24,7 @@
         "mango chunks",
         "clover honey"
       ],
-      "image" : "peach-mango.svg"
+      "image" : "images/peach-mango.svg"
     },
     {
       "name": "Berry Blast Avalanche",
@@ -35,7 +35,7 @@
         "raspberries",
         "greek yogurt"
       ],
-      "image": "berry-blast.svg"
+      "image": "images/berry-blast.svg"
     },
     {
       "name": "Caramel Chaos Crunch",
@@ -46,7 +46,7 @@
         "waffle cone pieces",
         "cream"
       ],
-      "image": "caramel-crunch.svg"
+      "image": "images/caramel-crunch.svg"
     }
 
   ]
