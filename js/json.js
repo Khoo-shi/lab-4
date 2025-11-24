@@ -8,7 +8,7 @@ const section = document.querySelector('section');
 async function populate() {
     // Introducing JavaScript Object Notation (JSON): https://json.org/
     // STEP 4: Store the URL of a JSON file in a variable */
-      const requestURL = 'i-scream.json';
+      const requestURL = 'js/i-scream.json';
     // STEP 5: Use the new URL to create a new request object
      const request = new Request(requestURL);
     // STEP 6: Make a network request with the fetch() function, which returns a Response object
@@ -28,8 +28,7 @@ async function populate() {
 populate();
 
 /* STEP 9b: Build out the populateHeader() function */
-function populateHeader() {
-   function populateHeader(jsonObj) {
+function populateHeader(jsonObj) {
     const h1 = document.createElement('h1');
     h1.textContent = jsonObj.companyName;
 
@@ -39,30 +38,51 @@ function populateHeader() {
     header.appendChild(h1);
     header.appendChild(p);
 }
-
-};
 /* STEP 10b: Assemble the showTopFlavors() function */
-function showTopFlavors() {
+function showTopFlavors(jsonObj) {
     // STEP 10c: Attache the JSON topFlavors object to a variable
-    //let topFlavors = jsonObj.topFlavors;
+    let topFlavors = jsonObj.topFlavors;
     // STEP 10d: Loop through the topFlavors object
     for (let i = 0; i < topFlavors.length; i ++) {
         // STEP 10e: build HTML elements for the content
-        
+        const article = document.createElement('article');
+        const h2 = document.createElement('h2');
+        const img = document.createElement('img');
+        const p1 = document.createElement('p');
+        const p2 = document.createElement('p');
+        const ul = document.createElement('ul');
 
         // STEP 10f: Set the textContent property for each of the above elements (except the UL), based on the JSON content
         
+        h2.textContent = topFlavors[i].name;
+        p1.textContent = `Calories: ${topFlavors[i].calories}`;
+        p2.textContent = `Type: ${topFlavors[i].type}`;
 
         // STEP 10g: Build a loop for the ingredients array in the JSON
-        
-            // add the ingredient to the UL
+        // image
+        img.src = topFlavors[i].image;
+        img.alt = topFlavors[i].name;
+
+        // ingredients loop
+        let ingredients = topFlavors[i].ingredients;
+        for (let j = 0; j < ingredients.length; j++) {
+            const li = document.createElement('li');
+            li.textContent = ingredients[j];
+            ul.appendChild(li);
+        }
+        // add the ingredient to the UL
 
         // STEP 10h: Append each of the above HTML elements to the ARTICLE element
-        
+        article.appendChild(h2);
+        article.appendChild(img);
+        article.appendChild(p1);
+        article.appendChild(p2);
+        article.appendChild(ul);
         // STEP 10i: Append each complete ARTICLE element to the SECTION element
-        
-    };
-};
+        section.appendChild(article);
+    }
+}
+
 // STEP 11: The instructor will edit the JSON file - refresh your page to see the updated content
 
 // STEP 12: Change the URL in STEP 3 to point to the JSON file in the local /js folder in order to prepare for today's lab
